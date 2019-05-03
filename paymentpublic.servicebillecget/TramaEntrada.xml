@@ -1,0 +1,39 @@
+<pay:paymentPublicServicesBillECGetRq
+	xmlns:pay="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/"
+	xmlns:met="http://www.colpatria.com/esb/services/metadata">
+	<met:requestHeader>
+		<met:esbHeader>
+			<met:transactionId>gero et</met:transactionId>
+			<met:serviceCode>sonoras i</met:serviceCode>
+			<met:operationCode>quae divu</met:operationCode>
+			<met:requestUser>verrantque per auras</met:requestUser>
+			<met:requestSystem>per</met:requestSystem>
+			<met:channel>circum claustra</met:channel>
+			<met:host>nimborum in</met:host>
+			<met:executionMode>f</met:executionMode>
+			<met:operationCountry>prof</met:operationCountry>
+			<met:operationBank>et carcere</met:operationBank>
+			<met:transactionDate>2012-01-07</met:transactionDate>
+			<met:transactionTime>04:44:59</met:transactionTime>
+			<met:officeCode>fla</met:officeCode>
+			<met:numberPages>ho</met:numberPages>
+			<met:totPages>ac</met:totPages>
+			<met:institutionCode>spe</met:institutionCode>
+			<met:usernameToken>
+				<met:userName>aris imponet honorem</met:userName>
+				<met:password>praeterea aut</met:password>
+			</met:usernameToken>
+		</met:esbHeader>
+	</met:requestHeader>
+	<pay:publicServicesBillECGetRq>
+		<pay:customer>
+			<pay:idType>c</pay:idType>
+			<pay:idNumber>imperio premit</pay:idNumber>
+		</pay:customer>
+		<pay:reference1>quisquam numen</pay:reference1>
+		<pay:reference2>ac vinclis</pay:reference2>
+		<pay:reference3>ac vinclis</pay:reference3>
+		<pay:agreementCode>3</pay:agreementCode>
+		<pay:sPServiceCode>3</pay:sPServiceCode>
+	</pay:publicServicesBillECGetRq>
+</pay:paymentPublicServicesBillECGetRq>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="0" currentCardNumber="0" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="2217665729">
+    <mopt:mapinfos name="QRYCHSP01_XML" number="1" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="QRYCHSP01_XML"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Response" isOutput="false" mapName="QRYCHSP01_XML">
+      <mopt:path>6:5</mopt:path>
+      <mopt:path>24:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Response" isOutput="true" mapName="QRYCHSP01_XML">
+      <mopt:path>Global:Out_Response</mopt:path>
+      <mopt:path>paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>responseHeader Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>status Comp responseHeader:responseHeader Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>error Comp status:status Comp responseHeader:responseHeader Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>esbHeader Comp responseHeader:responseHeader Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>publicServicesBillGetRs Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>customer Comp _publicServicesBillGetRs:publicServicesBillGetRs Comp _paymentPublicServicesBillGetRs Type:paymentPublicServicesBillGetRs Element:Global:Out_Response</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="REGVPCR01_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="QRYCHSP01_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

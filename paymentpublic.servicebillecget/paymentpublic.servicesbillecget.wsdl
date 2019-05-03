@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="paymentPublicServicesBillECGet"
+	targetNamespace="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soapenv11="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:tns="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/"
+			xmlns:mrm="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/">
+			<xsd:include schemaLocation="paymentpublic.servicesbillecget.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="paymentPublicServicesBillECGet_in">
+		<wsdl:part element="tns:paymentPublicServicesBillECGetRq"
+			name="paymentPublicServicesBillECGetRq" />
+	</wsdl:message>
+	<wsdl:message name="paymentPublicServicesBillECGet_out">
+		<wsdl:part element="tns:paymentPublicServicesBillECGetRs"
+			name="paymentPublicServicesBillECGetRs" />
+	</wsdl:message>
+	<wsdl:message name="paymentPublicServicesBillECGet_fault1">
+		<wsdl:part element="tns:paymentPublicServicesBillECGetRs"
+			name="paymentPublicServicesBillECGetRs" />
+	</wsdl:message>
+	<wsdl:portType name="MBC_paymentPublicServicesBillECGetPortType">
+		<wsdl:operation name="paymentPublicServicesBillECGet">
+			<wsdl:input message="tns:paymentPublicServicesBillECGet_in"
+				name="paymentPublicServicesBillECGet_Input" />
+			<wsdl:output message="tns:paymentPublicServicesBillECGet_out"
+				name="paymentPublicServicesBillECGet_Output" />
+			<wsdl:fault message="tns:paymentPublicServicesBillECGet_fault1"
+				name="paymentPublicServicesBillECGet_Fault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MBC_paymentPublicServicesBillECGetSOAP_HTTP_Binding"
+		type="tns:MBC_paymentPublicServicesBillECGetPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="paymentPublicServicesBillECGet">
+			<soap:operation soapAction="" />
+			<wsdl:input name="paymentPublicServicesBillECGet_Input">
+				<soap:body parts="paymentPublicServicesBillECGetRq" use="literal" />
+			</wsdl:input>
+			<wsdl:output name="paymentPublicServicesBillECGet_Output">
+				<soap:body parts="paymentPublicServicesBillECGetRs" use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="paymentPublicServicesBillECGet_Fault">
+				<soap:fault name="paymentPublicServicesBillECGet_Fault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="paymentPublicServicesBillECGet">
+		<wsdl:port binding="tns:MBC_paymentPublicServicesBillECGetSOAP_HTTP_Binding"
+			name="paymentPublicServicesBillECGetSOAP_HTTP_Port">
+			<soap:address
+				location="https://bancoColpatria/paymentpublicservicesbillecget" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

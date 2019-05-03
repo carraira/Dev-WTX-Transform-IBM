@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="1" currentCardNumber="1" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="971393139">
+    <mopt:mapinfos name="OCBCOSP01_XML" number="1" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="OCBCOSP01_XML"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Response" isOutput="false" mapName="OCBCOSP01_XML">
+      <mopt:path>24:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Response" isOutput="true" mapName="OCBCOSP01_XML">
+      <mopt:path>Global:Out_Response</mopt:path>
+      <mopt:path>paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~responseHeader:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>publicServicesBillECGetRs Comp _paymentPublicServicesBillECGetRs Type:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>Decl Prolog:Out_Response</mopt:path>
+      <mopt:path>customer Comp _publicServicesBillECGetRs:publicServicesBillECGetRs Comp _paymentPublicServicesBillECGetRs Type:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~status Comp meta~responseHeader Type:meta~responseHeader:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:paymentPublicServicesBillECGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>paymentPublicServicesBillECGetRs Element:Out_Response</mopt:path>
+      <mopt:path>publicServicesBillECGetRs Comp _paymentPublicServicesBillECGetRs Type:paymentPublicServicesBillECGetRs Element:Out_Response</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="OCBCOSP01_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

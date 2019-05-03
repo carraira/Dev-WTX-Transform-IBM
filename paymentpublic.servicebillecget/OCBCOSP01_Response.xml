@@ -1,0 +1,25 @@
+<tns:paymentPublicServicesBillECGetRs xmlns:tns="http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/" xmlns:meta="http://www.colpatria.com/esb/services/metadata">
+<meta:responseHeader>
+<meta:status>
+<meta:statusCode>Success</meta:statusCode>
+</meta:status>
+<meta:esbHeader>
+<meta:transactionId>2019043009243032</meta:transactionId>
+<meta:transactionDate>2019-04-30</meta:transactionDate>
+<meta:transactionTime>09:24:32</meta:transactionTime>
+</meta:esbHeader>
+</meta:responseHeader>
+<tns:publicServicesBillECGetRs>
+<tns:customer>
+<tns:idType>A</tns:idType>
+<tns:idNumber>10736686035</tns:idNumber>
+</tns:customer>
+<tns:flagDirectDebit>S</tns:flagDirectDebit>
+<tns:paymentDateTimely>2015-02-13</tns:paymentDateTimely>
+<tns:paydayLimit>2015-02-15</tns:paydayLimit>
+<tns:paymentValue>120045.87</tns:paymentValue>
+<tns:AssociatedService>458</tns:AssociatedService>
+<tns:AssociatedValue>4578.52</tns:AssociatedValue>
+<tns:obligationNumber>00000000000111144455</tns:obligationNumber>
+</tns:publicServicesBillECGetRs>
+</tns:paymentPublicServicesBillECGetRs>

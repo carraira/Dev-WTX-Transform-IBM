@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MMS SYSTEM "mms.dtd">
+<MMS mapcount="1" path="D:\OnlineCommercialBanking\workspaceWTXAiran\paymentpublic.servicebillocbget\paymentpublic.servicebillecget_request.mms">
+ <Map name="XML_OCBCOSP01" InputCount="1" OutputCount="1" AuditCount="0" RemarkCount="0" Source="" Runtime="WDP">
+  <MapSettings>
+   <MapAudit Switch="OFF">
+    <BurstAudit>
+     <Data.Never SizeValidation="WrongSize"/>
+     <Execution.Never/>
+    </BurstAudit>
+    <SummaryAudit execution="Always"/>
+    <SettingsAudit data="Never" map="Never"/>
+    <AuditLocation.File>
+     <Directory.Map/>
+     <FileName.Unique/>
+    </AuditLocation.File>
+   </MapAudit>
+   <MapTrace Switch="OFF">
+    <ContentTrace.File Switch="OFF">
+     <TraceLocation.File>
+      <Directory.Map/>
+      <FileName.Default/>
+     </TraceLocation.File>
+     <InputContentTrace.ALL/>
+     <RulesTrace.OFF/>
+     <SummaryContentTrace.OFF/>
+    </ContentTrace.File>
+   </MapTrace>
+   <WorkSpace.File PageSize="64" PageCount="8">
+    <Directory.Map/>
+    <WorkFilePrefix.Unique/>
+   </WorkSpace.File>
+   <Century.Current/>
+   <Validation.Standard/>
+   <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+   <Warnings.Every action="warn"/>
+   <CodePageFallback Fallback="SKIP"/>
+  </MapSettings>
+  <Input>
+    <Schema cardnumber="1"
+            cardname="In_Request"
+            typetree="paymentpublic.servicesbillecget.mtt"
+            type="Doc XSD"/>
+    <NameSpaces>
+      <NameSpace>
+        <URL>http://www.colpatria.com/esb/services/payment/as/paymentPublicServicesBillECGet/</URL>
+        <Prefix>tns</Prefix>
+      </NameSpace>
+      <NameSpace>
+        <URL>http://www.colpatria.com/ents/esb/MessageFormat-v1.0</URL>
+        <Prefix/>
+      </NameSpace>
+      <NameSpace>
+        <URL>http://schemas.xmlsoap.org/soap/envelope/</URL>
+        <Prefix>soapenv11</Prefix>
+      </NameSpace>
+      <NameSpace>
+        <URL>http://schemas.xmlsoap.org/wsdl/</URL>
+        <Prefix>wsdl</Prefix>
+      </NameSpace>
+      <NameSpace>
+        <URL>http://schemas.xmlsoap.org/wsdl/soap/</URL>
+        <Prefix>soap</Prefix>
+      </NameSpace>
+    </NameSpaces>
+    <SourceRule>
+      <FetchAs>
+       <Integral workarea="Create" fetchunit="S"/>
+      </FetchAs>
+      <GET>
+       <FILE_Source>
+        <FilePath>TramaEntrada.xml</FilePath>
+        <FILE_Source.Transaction OnSuccess="Keep" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Source>
+      </GET>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+      <MetaDataLocation>paymentpublic.servicesbillecget.xsd</MetaDataLocation>
+    </SourceRule>
+  </Input>
+  <Output>
+    <Schema cardnumber="1"
+            cardname="Out_Request"
+            typetree="OCBCOSP01_REQUEST.mtt"
+            type="REQUEST Record CopyBook"/>
+    <NameSpaces/>
+    <TargetRule>
+      <PUT>
+       <FILE_Target>
+        <FilePath>OCBCOSP01_Request.txt</FilePath>
+        <FILE_Target.Transaction OnSuccess="Create" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Target>
+      </PUT>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </TargetRule>
+    <SyntaxCard>OFF</SyntaxCard>
+    <MapRule rulenumber="1">
+      <objectset>TRANSACTION_ID Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=transactionId Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="2">
+      <objectset>TYPE_RQ Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=&quot;RQ&quot;</objectrule>
+    </MapRule>
+    <MapRule rulenumber="3">
+      <objectset>COUNTRY_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(operationCountry Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="4">
+      <objectset>BANK_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(institutionCode Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="5">
+      <objectset>REQUESTER_SYSTEM Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=requestSystem Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="6">
+      <objectset>SERVICE_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=serviceCode Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="7">
+      <objectset>REQUESTING_DEVICE_ID Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=host Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="8">
+      <objectset>REQUESTER_USER Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=requestUser Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="9">
+      <objectset>REQUEST_DATE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(FROMDATETIME(transactionDate Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request, &quot;{CCYYMMDD}&quot;))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="10">
+      <objectset>REQUEST_TIME Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(FROMDATETIME(transactionTime Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request, &quot;{HH24MMSS}&quot;))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="11">
+      <objectset>INTEGRATION_USER Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=userName Comp UsernameToken:usernameToken Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="12">
+      <objectset>INTEGRATION_USER_PASSWORD Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=password Comp UsernameToken:usernameToken Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="13">
+      <objectset>IDENTIFICATION_TYPE Field:BODY Group:Out_Request</objectset>
+      <objectrule>=idType Comp customer:customer Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="14">
+      <objectset>IDENTIFICATION_NUMBER Field:BODY Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(idNumber Comp customer:customer Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="15">
+      <objectset>RESPONSE_DATE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="16">
+      <objectset>RESPONSE_TIME Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="17">
+      <objectset>RESPONSE_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="18">
+      <objectset>RESPONSE_DESCRIPTION Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="19">
+      <objectset>#1 Filler:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="20">
+      <objectset>REFERENCE_1 Field:BODY Group:Out_Request</objectset>
+      <objectrule>=reference1 Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="21">
+      <objectset>REFERENCE_2 Field:BODY Group:Out_Request</objectset>
+      <objectrule>=reference2 Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="22">
+      <objectset>REFERENCE_3 Field:BODY Group:Out_Request</objectset>
+      <objectrule>=reference3 Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="23">
+      <objectset>AGREEMENT_CODE Field:BODY Group:Out_Request</objectset>
+      <objectrule>=agreementCode Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="24">
+      <objectset>SP_SERVICE_CODE Field:BODY Group:Out_Request</objectset>
+      <objectrule>=sPServiceCode Comp _publicServicesBillECGetRq:publicServicesBillECGetRq Comp _paymentPublicServicesBillECGetRq Type:paymentPublicServicesBillECGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+  </Output>
+ </Map>
+</MMS>

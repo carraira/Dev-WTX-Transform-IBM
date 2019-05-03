@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="1" activeOutputCardNumber="1" currentCardNumber="1" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="2037786464">
+    <mopt:mapinfos name="XML_OCBCOSP01" number="1" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="XML_OCBCOSP01"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Request" isOutput="false" mapName="XML_OCBCOSP01">
+      <mopt:path>112:113</mopt:path>
+      <mopt:path>111:112:113</mopt:path>
+      <mopt:path>80:111:112:113</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Request" isOutput="true" mapName="XML_OCBCOSP01">
+      <mopt:path>BODY Group:Out_Request</mopt:path>
+      <mopt:path>HEADER Group:Out_Request</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="XML_OCBCOSP01">
+      <mopt:cardstates index="0" name="In_Request" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Request" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>
