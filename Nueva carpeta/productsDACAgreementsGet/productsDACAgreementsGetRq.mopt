@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="0" currentCardNumber="0" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="3195609143">
+    <mopt:maplayouts name="REQUEST" number="1" set="true">
+      <mopt:partlayouts height="68" name="REQUEST#M#REQUEST" selected="false" visible="true" width="58" x="50" y="50"/>
+      <mopt:partlayouts height="68" name="REQUEST#M#agreements" selected="false" visible="true" width="78" x="140" y="184"/>
+    </mopt:maplayouts>
+    <mopt:mapinfos name="REQUEST" number="1" subMapCount="1">
+      <mopt:funcMapInfos cardName="AgreementsCobolRq" count="1" name="agreements"/>
+    </mopt:mapinfos>
+    <mopt:mapinfos name="agreements" number="2" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="REQUEST"/>
+    <mopt:results mapName="agreements"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="AgreementsCobolRq" isOutput="true" mapName="REQUEST">
+      <mopt:path>HEADER Group:AgreementsCobolRq</mopt:path>
+      <mopt:path>BODY Group:AgreementsCobolRq</mopt:path>
+      <mopt:path>AGREEMENTS:BODY Group:AgreementsCobolRq</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="AgreementsRq" isOutput="false" mapName="REQUEST">
+      <mopt:path>143:144</mopt:path>
+      <mopt:path>141:143:144</mopt:path>
+      <mopt:path>139:141:143:144</mopt:path>
+      <mopt:path>21:139:141:143:144</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="REQUEST">
+      <mopt:cardstates index="0" name="AgreementsRq" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="AgreementsCobolRq" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\IBM\WebSphere Transformation Extender 8.4.1\xvallog.xsl"?>
+<XMLRunLog version="1.0" HomeDir="C:\\IBM\\WebSphere Transformation Extender 8.4.1\\">
+<Card  Name="AgreementsRq">
+<InputName Size="0" BaseOffset="0">D:\OnlineCommercialBanking\workspaceWTXjhon\productsDACAgreementsGet\DACAxml.xml</InputName>
+<!--Building the Object Model.... --> 
+<!--Building the Object Model.... --> 
+<!--Parsing the internal buffer.... --> 
+<!--Start of document --> 
+<!--Received StartElement : Envelope --> 
+<!--Received StartElement : Header --> 
+<!--Received EndElement : soapenv:Header --> 
+<TypeEntry ChoiceGroup="true">
+	<TypeName></TypeName>
+	<Type>8</Type>
+	<ParentType>2</ParentType>
+	<Level>1</Level>
+	<DocumentType>XML_BODY</DocumentType>
+	<LogicalOffset>0</LogicalOffset>
+	<LogicalLength>243</LogicalLength>
+	<Length>243</Length>
+	<ObjectNumber>0</ObjectNumber>
+	<Data></Data>
+</TypeEntry>
+<TypeEntry>
+	<TypeName></TypeName>
+	<Type>2</Type>
+	<ParentType></ParentType>
+	<Level>0</Level>
+	<DocumentType>XML_DOCUMENT</DocumentType>
+	<LogicalOffset>0</LogicalOffset>
+	<LogicalLength>0</LogicalLength>
+	<Length>0</Length>
+	<ObjectNumber>1</ObjectNumber>
+	<Data></Data>
+</TypeEntry>
+<StatusMessage>XMLParser: Input XML data is invalid.</StatusMessage>
+<DetailedStatusMessage>
+Error (-9), "XMLParser: Could not find type to assign XML data."
+No type to assign data was found 
+[element name: Envelope, namespace: http://schemas.xmlsoap.org/soap/envelope/, current input data offset: 223]
+
+Error (-9), "XMLParser: Could not find type to assign XML data."
+No type to assign data was found 
+[element name: Header, namespace: http://schemas.xmlsoap.org/soap/envelope/, current input data offset: 243]
+
+Error (-1), "XMLParser: Input XML data is invalid."
+There is a mismatch between the typetree and input data. All type objects are not built.
+
+</DetailedStatusMessage>
+<ReturnCode>-1</ReturnCode>
+</Card>
+</XMLRunLog>

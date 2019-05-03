@@ -1,0 +1,30 @@
+M114	ERROR:
+	Correlación: QRYACRL01_XML   Salida: agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response
+	El argumento de salida de la regla no coincide con el tipo de salida:
+	=IF(RESPONSE_CODE Field:HEADER Group:In_Response = "SUC",agreements(EXTRACT( ACCORDS:BODY Group:In_Response,ACC_CODE Field:ACCORDS:BODY Group:In_Response!=0)))
+
+M113	ERROR:
+	Correlación: agreements   Salida: entryDate Comp _agreement:output
+	El argumento #1 de la función TEXTTODATE no es válido.
+
+M115	ERROR:
+	Correlación: agreements   Salida: bankcode Comp _recurringPayment:recurringPayment Comp _agreement:output
+	El argumento de salida de la regla no coincide con la subclase del elemento de salida:
+	=CREDIT_BANK_PAY_RECURRING Field:input
+
+M115	ERROR:
+	Correlación: agreements   Salida: accountType Comp _recurringPayment:recurringPayment Comp _agreement:output
+	El argumento de salida de la regla no coincide con la subclase del elemento de salida:
+	=TYPE_ACCOUNT_CREDIT_PAY_REC Field:input
+
+M115	ERROR:
+	Correlación: agreements   Salida: accountNumber Comp _recurringPayment:recurringPayment Comp _agreement:output
+	El argumento de salida de la regla no coincide con la subclase del elemento de salida:
+	=CREDIT_ACCOUNT_NUMBER_PAY_REC Field:input
+
+M113	ERROR:
+	Correlación: agreements   Salida: blockDate Comp _agreement:output
+	El argumento #1 de la función TEXTTODATE no es válido.
+
+
+Número total de errores: 6.   Número total de avisos: 0.

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="1" activeOutputCardNumber="1" currentCardNumber="1" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="1111342427">
+    <mopt:maplayouts name="agreement" number="3" set="true">
+      <mopt:partlayouts height="68" name="agreement#M#agreement" selected="false" visible="true" width="71" x="50" y="50"/>
+    </mopt:maplayouts>
+    <mopt:mapinfos name="COBSKJDH1_XML" number="1" subMapCount="2">
+      <mopt:funcMapInfos cardName="RSxml" count="2" name="agreement"/>
+      <mopt:funcMapInfos cardName="RSxml" count="1" name="agreements"/>
+    </mopt:mapinfos>
+    <mopt:mapinfos name="agreement" number="3" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="agreementsRs"/>
+    <mopt:results mapName="agreement"/>
+    <mopt:results mapName="COBSKJDH1_XML"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="RScobol" isOutput="false" mapName="agreementsRs">
+      <mopt:path>6:5</mopt:path>
+      <mopt:path>24:5</mopt:path>
+      <mopt:path>28:24:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="RSxml" isOutput="true" mapName="agreementsRs">
+      <mopt:path>Decl Prolog:RSxml</mopt:path>
+      <mopt:path>Global:RSxml</mopt:path>
+      <mopt:path>productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>customer Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>meta~responseHeader:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>debitAccount Comp _agreement:agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>meta~status Comp meta~responseHeader Type:meta~responseHeader:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>recurringPayment Comp _agreement:agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="output" isOutput="true" mapName="agreements">
+      <mopt:path>agreement Comp _agreements:output</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="input" isOutput="false" mapName="agreements"/>
+    <mopt:expansions cardName="output" isOutput="true" mapName="agreement">
+      <mopt:path>debitAccount Comp _agreement:output</mopt:path>
+      <mopt:path>recurringPayment Comp _agreement:output</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Response" isOutput="true" mapName="COBSKJDH1_XML">
+      <mopt:path>Global:RSxml</mopt:path>
+      <mopt:path>productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+      <mopt:path>agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsDACAgreementsGetRs Type:productsDACAgreementsGetRs Element:Global:RSxml</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="In_Response" mapName="COBSKJDH1_XML"/>
+    <mopt:mapstates name=""/>
+    <mopt:mapstates name="NewMap1">
+      <mopt:cardstates index="0" name="RScobol" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="RSxml" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="agreementsRs">
+      <mopt:cardstates index="0" name="RScobol" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="RSxml" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="agreements">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="agreement">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="COBSKJDH1_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

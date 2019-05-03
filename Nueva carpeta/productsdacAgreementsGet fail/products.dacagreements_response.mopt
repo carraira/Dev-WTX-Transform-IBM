@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="0" currentCardNumber="0" currentMapNumber="2" version="12.0"/>
+  <mopt:composition checksum="1684678306">
+    <mopt:mapinfos name="QRYACRL01_XML" number="1" subMapCount="1">
+      <mopt:funcMapInfos cardName="Out_Response" count="2" name="agreements"/>
+    </mopt:mapinfos>
+    <mopt:mapinfos name="agreements" number="2" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="QRYACRL01_XML"/>
+    <mopt:results mapName="movements"/>
+    <mopt:results mapName="agreements"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Response" isOutput="false" mapName="QRYACRL01_XML">
+      <mopt:path>24:5</mopt:path>
+      <mopt:path>28:24:5</mopt:path>
+      <mopt:path>6:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Response" isOutput="true" mapName="QRYACRL01_XML">
+      <mopt:path>Global:Out_Response</mopt:path>
+      <mopt:path>productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>dacAgreementsGetRq Comp _productsdacaAgreementsGetRq Type:productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>customer Comp _dacAgreementsGetRq:dacAgreementsGetRq Comp _productsdacaAgreementsGetRq Type:productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>agreements Comp _dacAgreementsGetRq:dacAgreementsGetRq Comp _productsdacaAgreementsGetRq Type:productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>agreement Comp agreements:agreements Comp _dacAgreementsGetRq:dacAgreementsGetRq Comp _productsdacaAgreementsGetRq Type:productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~requestHeader:productsdacaAgreementsGetRq Element:Global:Out_Response</mopt:path>
+      <mopt:path>productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>customer Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="output" isOutput="true" mapName="agreements">
+      <mopt:path>debitAccount Comp _agreement:output</mopt:path>
+      <mopt:path>recurringPayment Comp _agreement:output</mopt:path>
+      <mopt:path>agreement Comp _agreements:output</mopt:path>
+      <mopt:path>recurringPayment Comp _agreement:agreement Comp _agreements:output</mopt:path>
+      <mopt:path>debitAccount Comp _agreement:agreement Comp _agreements:output</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="input" isOutput="false" mapName="movements">
+      <mopt:path>24:5</mopt:path>
+      <mopt:path>28:24:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="output" isOutput="true" mapName="movements">
+      <mopt:path>Global:output</mopt:path>
+      <mopt:path>productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>meta~responseHeader:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>customer Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+      <mopt:path>debitAccount Comp _agreement:agreement Comp _agreements:agreements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:output</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="input" mapName="agreements"/>
+    <mopt:mapstates name="QRYACRL01_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="agreements">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="movements">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

@@ -1,0 +1,23 @@
+
+(Level 1: Offset 0, len 243, comp 2 of 2, #1, DI 000000000001:)
+Data at offset 0 ('<soapenv:Envelop...') was found to be of TYPE
+   X'0008' (Global XSD).
+
+(Level 1: Offset 0, len 243, comp 1 of 2, #1, DI 000000000002:)
+External Parser returned Error:
+TYPE X'0002' (Error (-9), "XMLParser: Could not find type to assign XML data."
+No type to assign data was found 
+[element name: Envelope, namespace: http://schemas.xmlsoap.org/soap/envelope/, current input data offset: 223]
+
+Error (-9), "XMLParser: Could not find type to assign XML data."
+No type to assign data was found 
+[element name: Header, namespace: http://schemas.xmlsoap.org/soap/envelope/, current input data offset: 243]
+
+Error (-1), "XMLParser: Input XML dat).
+
+External Parser returned Error
+
+   End of Validation messages for INPUT CARD 1.
+
+
+   End of Execution messages.

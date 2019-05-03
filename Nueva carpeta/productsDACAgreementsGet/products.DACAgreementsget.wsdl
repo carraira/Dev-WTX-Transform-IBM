@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="productsDACAgreementsGet"
+	targetNamespace="http://www.colpatria.com/esb/services/product/as/productsDACAgreementsGet/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soapenv11="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:tns="http://www.colpatria.com/esb/services/product/as/productsDACAgreementsGet/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.colpatria.com/esb/services/product/as/productsDACAgreementsGet/"
+			xmlns:mrm="http://www.colpatria.com/esb/services/product/as/productsDACAgreementsGet/">
+			<xsd:include schemaLocation="products.DACAgreementsget.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="productsDACAgreementsGet_in">
+		<wsdl:part element="tns:productsDACAgreementsGetRq"
+			name="productsDACAgreementsGetRq" />
+	</wsdl:message>
+	<wsdl:message name="productsDACAgreementsGet_out">
+		<wsdl:part element="tns:productsDACAgreementsGetRs"
+			name="productsDACAgreementsGetRs" />
+	</wsdl:message>
+	<wsdl:message name="productsDACAgreementsGet_fault1">
+		<wsdl:part element="tns:productsDACAgreementsGetRs"
+			name="productsDACAgreementsGetRs" />
+	</wsdl:message>
+	<wsdl:portType name="MBC_productsDACAgreementsGetPortType">
+		<wsdl:operation name="productsDACAgreementsGet">
+			<wsdl:input message="tns:productsDACAgreementsGet_in"
+				name="productsDACAgreementsGet_Input" />
+			<wsdl:output message="tns:productsDACAgreementsGet_out"
+				name="productsDACAgreementsGet_Output" />
+			<wsdl:fault message="tns:productsDACAgreementsGet_fault1"
+				name="productsDACAgreementsGet_Fault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MBC_productsDACAgreementsGetSOAP_HTTP_Binding"
+		type="tns:MBC_productsDACAgreementsGetPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="productsDACAgreementsGet">
+			<soap:operation soapAction="" />
+			<wsdl:input name="productsDACAgreementsGet_Input">
+				<soap:body parts="productsDACAgreementsGetRq" use="literal" />
+			</wsdl:input>
+			<wsdl:output name="productsDACAgreementsGet_Output">
+				<soap:body parts="productsDACAgreementsGetRs" use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="productsDACAgreementsGet_Fault">
+				<soap:fault name="productsDACAgreementsGet_Fault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="productsDACAgreementsGet">
+		<wsdl:port binding="tns:MBC_productsDACAgreementsGetSOAP_HTTP_Binding"
+			name="productsDACAgreementsGetSOAP_HTTP_Port">
+			<soap:address
+				location="https://bancoColpatria/productsdacagreementsget" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

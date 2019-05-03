@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MMS SYSTEM "mms.dtd">
+<MMS mapcount="2" path="D:\OnlineCommercialBanking\workspaceWTXAiran\productsdacAgreementsGet\products.dacagreements_response.mms">
+ <Map name="QRYACRL01_XML" InputCount="1" OutputCount="1" AuditCount="0" RemarkCount="0" Source="" Runtime="WDP">
+  <MapSettings>
+   <MapAudit Switch="OFF">
+    <BurstAudit>
+     <Data.Never SizeValidation="WrongSize"/>
+     <Execution.Never/>
+    </BurstAudit>
+    <SummaryAudit execution="Always"/>
+    <SettingsAudit data="Never" map="Never"/>
+    <AuditLocation.File>
+     <Directory.Map/>
+     <FileName.Unique/>
+    </AuditLocation.File>
+   </MapAudit>
+   <MapTrace Switch="ON">
+    <ContentTrace.File Switch="ON">
+     <TraceLocation.File>
+      <Directory.Map/>
+      <FileName.Default/>
+     </TraceLocation.File>
+     <InputContentTrace.ALL/>
+     <RulesTrace.OFF/>
+     <SummaryContentTrace.ON/>
+    </ContentTrace.File>
+   </MapTrace>
+   <WorkSpace.File PageSize="64" PageCount="8">
+    <Directory.Map/>
+    <WorkFilePrefix.Unique/>
+   </WorkSpace.File>
+   <Century.Current/>
+   <Validation.Standard/>
+   <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+   <Warnings.Every action="warn"/>
+   <CodePageFallback Fallback="SKIP"/>
+  </MapSettings>
+  <Input>
+    <Schema cardnumber="1"
+            cardname="In_Response"
+            typetree="QRYACRL01_RESPONSE.mtt"
+            type="RESPONSE Record CopyBook"/>
+    <NameSpaces/>
+    <SourceRule>
+      <FetchAs>
+       <Integral workarea="Create" fetchunit="S"/>
+      </FetchAs>
+      <GET>
+       <FILE_Source>
+        <FilePath>TramaSalida.txt</FilePath>
+        <FILE_Source.Transaction OnSuccess="Keep" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Source>
+      </GET>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </SourceRule>
+  </Input>
+  <Output>
+    <Schema cardnumber="1"
+            cardname="Out_Response"
+            typetree="products.dacAgreementsGet.mtt"
+            type="Doc XSD"/>
+    <NameSpaces>
+      <NameSpace>
+        <URL>http://www.colpatria.com/esb/services/products/as/productsDACAgreementsGet/</URL>
+        <Prefix>tns</Prefix>
+      </NameSpace>
+      <NameSpace>
+        <URL>http://www.colpatria.com/esb/services/metadata</URL>
+        <Prefix>meta</Prefix>
+      </NameSpace>
+    </NameSpaces>
+    <TargetRule>
+      <PUT>
+       <FILE_Target>
+        <FilePath>QRYACRL01_RESPONSE.xml</FilePath>
+        <FILE_Target.Transaction OnSuccess="Create" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Target>
+      </PUT>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+      <MetaDataLocation>products.dacAgreementsGet.xsd</MetaDataLocation>
+    </TargetRule>
+    <SyntaxCard>OFF</SyntaxCard>
+    <MapRule rulenumber="1">
+      <objectset>version:Decl Prolog:Out_Response</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="2">
+      <objectset>encoding:Decl Prolog:Out_Response</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="3">
+      <objectset>standalone:Decl Prolog:Out_Response</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="4">
+      <objectset>meta~statusCode Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, &quot;Fail&quot;, &quot;Success&quot;)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="5">
+      <objectset>meta~statusDesc Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, &quot;Provider Business Exception&quot;)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="6">
+      <objectset>meta~origin Comp meta~error:meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, &quot;AS400&quot;)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="7">
+      <objectset>meta~errorCode Comp meta~error:meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, RESPONSE_CODE Field:HEADER Group:In_Response)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="8">
+      <objectset>meta~severity Comp meta~error:meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, &quot;ERROR&quot;)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="9">
+      <objectset>meta~description Comp meta~error:meta~error Comp meta~status:meta~status Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response != &quot;SUC&quot;, RESPONSE_DESCRIPTION Field:HEADER Group:In_Response)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="10">
+      <objectset>meta~transactionId Comp meta~esbHeader:meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=TRANSACTION_ID Field:HEADER Group:In_Response</objectrule>
+    </MapRule>
+    <MapRule rulenumber="11">
+      <objectset>meta~transactionDate Comp meta~esbHeader:meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=TEXTTODATE(NUMBERTOTEXT(RESPONSE_DATE Field:HEADER Group:In_Response))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="12">
+      <objectset>meta~transactionTime Comp meta~esbHeader:meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=TEXTTOTIME(NUMBERTOTEXT(RESPONSE_TIME Field:HEADER Group:In_Response))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="13">
+      <objectset>meta~numberPages Comp meta~esbHeader:meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="14">
+      <objectset>meta~totPages Comp meta~esbHeader:meta~esbHeader Comp meta~responseHeader Type:meta~responseHeader:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="15">
+      <objectset>code Comp product:product Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response = &quot;SUC&quot;, PRODUCT_CODE Field:BODY Group:In_Response)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="16">
+      <objectset>number Comp product:product Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response = &quot;SUC&quot;, PRODUCT_NUMBER Field:BODY Group:In_Response)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="17">
+      <objectset>movement Comp movements:movements Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response = &quot;SUC&quot;, movements(EXTRACT(  MOVEMENTS:BODY Group:In_Response, TRANSACTION_DATE Field:MOVEMENTS:BODY Group:In_Response!=0)))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="18">
+      <objectset>cursor Comp _dacAgreementsGetRs:dacAgreementsGetRs Comp _productsdacaAgreementsGetRs Type:productsdacaAgreementsGetRs Element:Global:Out_Response</objectset>
+      <objectrule>=IF(RESPONSE_CODE Field:HEADER Group:In_Response = &quot;SUC&quot;, FROMNUMBER(CURSOR Field:BODY Group:In_Response))</objectrule>
+    </MapRule>
+  </Output>
+ </Map>
+ <Map name="movements" InputCount="1" OutputCount="1" AuditCount="0" RemarkCount="0" Source="" Runtime="WTX">
+  <MapSettings>
+   <MapAudit Switch="OFF">
+    <BurstAudit>
+     <Data.Never SizeValidation="WrongSize"/>
+     <Execution.Never/>
+    </BurstAudit>
+    <SummaryAudit execution="Always"/>
+    <SettingsAudit data="Never" map="Never"/>
+    <AuditLocation.File>
+     <Directory.Map/>
+     <FileName.Unique/>
+    </AuditLocation.File>
+   </MapAudit>
+   <MapTrace Switch="OFF">
+    <ContentTrace.File Switch="OFF">
+     <TraceLocation.File>
+      <Directory.Map/>
+      <FileName.Default/>
+     </TraceLocation.File>
+     <InputContentTrace.OFF/>
+     <RulesTrace.OFF/>
+     <SummaryContentTrace.OFF/>
+    </ContentTrace.File>
+   </MapTrace>
+   <WorkSpace.File PageSize="64" PageCount="8">
+    <Directory.Map/>
+    <WorkFilePrefix.Unique/>
+   </WorkSpace.File>
+   <Century.Current/>
+   <Validation.Standard/>
+   <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+   <Warnings.Every action="warn"/>
+   <CodePageFallback Fallback="SKIP"/>
+  </MapSettings>
+  <Input>
+    <Schema cardnumber="1"
+            cardname="input"
+            typetree="QRYACRL01_RESPONSE.mtt"
+            type="MOVEMENTS Group CopyBook"/>
+    <NameSpaces/>
+    <SourceRule>
+      <FetchAs>
+       <Integral workarea="Create" fetchunit="S"/>
+      </FetchAs>
+      <GET>
+       <FILE_Source>
+        <FILE_Source.Transaction OnSuccess="Keep" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Source>
+      </GET>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </SourceRule>
+  </Input>
+  <Output>
+    <Schema cardnumber="1"
+            cardname="output"
+            typetree="products.dacAgreementsGet.mtt"
+            type="movement Comp movements Type XSD"/>
+    <NameSpaces/>
+    <TargetRule>
+      <PUT>
+       <FILE_Target>
+        <FILE_Target.Transaction OnSuccess="Create" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Target>
+      </PUT>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </TargetRule>
+    <SyntaxCard>OFF</SyntaxCard>
+    <MapRule rulenumber="1">
+      <objectset>amount Comp movement:output</objectset>
+      <objectrule>=AMOUNT Field:input</objectrule>
+    </MapRule>
+    <MapRule rulenumber="2">
+      <objectset>description Comp movement:output</objectset>
+      <objectrule>=TRANSACTION_DESCRIPTION Field:input</objectrule>
+    </MapRule>
+    <MapRule rulenumber="3">
+      <objectset>transactionType Comp movement:output</objectset>
+      <objectrule>=TRANSACTION_TYPE Field:input</objectrule>
+    </MapRule>
+    <MapRule rulenumber="4">
+      <objectset>originalDate Comp movement:output</objectset>
+      <objectrule>=TEXTTODATE(NUMBERTOTEXT(TRANSACTION_DATE Field:input))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="5">
+      <objectset>movementID Comp movement:output</objectset>
+      <objectrule>=TRANSACTION_IDENTIFIER Field:input</objectrule>
+    </MapRule>
+    <MapRule rulenumber="6">
+      <objectset>branchCode Comp movement:output</objectset>
+      <objectrule>=OFFICE_CODE Field:input</objectrule>
+    </MapRule>
+  </Output>
+ </Map>
+</MMS>

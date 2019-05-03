@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="0" currentCardNumber="0" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="3623861700">
+    <mopt:mapinfos name="XML_QRYACRL01" number="1" subMapCount="1">
+      <mopt:funcMapInfos cardName="Out_Request" count="1" name="agreements"/>
+    </mopt:mapinfos>
+    <mopt:mapinfos name="agreements" number="2" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="XML_QRYACRL01"/>
+    <mopt:results mapName="agreements"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Request" isOutput="false" mapName="XML_OCBMOVA01">
+      <mopt:path>116:117</mopt:path>
+      <mopt:path>114:116:117</mopt:path>
+      <mopt:path>115:116:117</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Request" isOutput="true" mapName="XML_OCBMOVA01">
+      <mopt:path>HEADER Group:Out_Request</mopt:path>
+      <mopt:path>BODY Group:Out_Request</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="In_Request" isOutput="false" mapName="XML_QRYACRL01">
+      <mopt:path>12:144</mopt:path>
+      <mopt:path>143:144</mopt:path>
+      <mopt:path>141:143:144</mopt:path>
+      <mopt:path>142:143:144</mopt:path>
+      <mopt:path>76:141:143:144</mopt:path>
+      <mopt:path>85:76:141:143:144</mopt:path>
+      <mopt:path>94:85:76:141:143:144</mopt:path>
+      <mopt:path>84:76:141:143:144</mopt:path>
+      <mopt:path>139:141:143:144</mopt:path>
+      <mopt:path>21:139:141:143:144</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Request" isOutput="true" mapName="XML_QRYACRL01">
+      <mopt:path>HEADER Group:Out_Request</mopt:path>
+      <mopt:path>BODY Group:Out_Request</mopt:path>
+      <mopt:path>AGREEMENTS:BODY Group:Out_Request</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="XML_OCBMOVA01">
+      <mopt:cardstates index="0" name="In_Request" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Request" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="XML_QRYACRL01">
+      <mopt:cardstates index="0" name="In_Request" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Request" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="agreements">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

@@ -1,0 +1,32 @@
+
+<prod:productsDACAgreementsGetRq
+	xmlns:prod="http://www.colpatria.com/esb/services/product/as/productsDACAgreementsGet/"
+	xmlns:met="http://www.colpatria.com/esb/services/metadata">
+	<met:requestHeader>
+		<met:esbHeader>
+			<met:transactionId>20190408163859636</met:transactionId>
+			<met:serviceCode>OCBMOVA01</met:serviceCode>
+			<met:requestUser>OCB</met:requestUser>
+			<met:requestSystem>DIG</met:requestSystem>
+			<met:host>169.254.204.186</met:host>
+			<met:executionMode>S</met:executionMode>
+			<met:operationCountry>57</met:operationCountry>
+			<met:operationBank>Colpatria</met:operationBank>
+			<met:transactionDate>2019-04-08</met:transactionDate>
+			<met:transactionTime>16:38:59</met:transactionTime>
+			<met:numberPages>01</met:numberPages>
+			<met:institutionCode>019</met:institutionCode>
+		</met:esbHeader>
+	</met:requestHeader>
+	<prod:dacAgreementsGetRq>
+		<prod:customer>
+			<prod:idType>h</prod:idType>
+			<prod:idNumber>123456789123456</prod:idNumber>
+		</prod:customer>
+		<prod:agreements>
+			<prod:agreement>
+				<prod:code>12345</prod:code>
+			</prod:agreement>
+		</prod:agreements>
+	</prod:dacAgreementsGetRq>
+</prod:productsDACAgreementsGetRq>
