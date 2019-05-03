@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MMS SYSTEM "mms.dtd">
+<MMS mapcount="2" path="D:\Asignaciones\workspaces\itx\account.movementsget\account.movementsget_request.mms">
+ <Map name="XML_OCBMOVA01" InputCount="1" OutputCount="1" AuditCount="0" RemarkCount="0" Source="" Runtime="WDP">
+  <MapSettings>
+   <MapAudit Switch="OFF">
+    <BurstAudit>
+     <Data.Never SizeValidation="WrongSize"/>
+     <Execution.Never/>
+    </BurstAudit>
+    <SummaryAudit execution="Always"/>
+    <SettingsAudit data="Never" map="Never"/>
+    <AuditLocation.File>
+     <Directory.Map/>
+     <FileName.Unique/>
+    </AuditLocation.File>
+   </MapAudit>
+   <MapTrace Switch="OFF">
+    <ContentTrace.File Switch="OFF">
+     <TraceLocation.File>
+      <Directory.Map/>
+      <FileName.Default/>
+     </TraceLocation.File>
+     <InputContentTrace.ALL/>
+     <RulesTrace.OFF/>
+     <SummaryContentTrace.OFF/>
+    </ContentTrace.File>
+   </MapTrace>
+   <WorkSpace.File PageSize="64" PageCount="8">
+    <Directory.Map/>
+    <WorkFilePrefix.Unique/>
+   </WorkSpace.File>
+   <Century.Current/>
+   <Validation.Standard/>
+   <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+   <Warnings.Every action="warn"/>
+   <CodePageFallback Fallback="SKIP"/>
+  </MapSettings>
+  <Input>
+    <Schema cardnumber="1"
+            cardname="In_Request"
+            typetree="account.movementsget.mtt"
+            type="Doc XSD"/>
+    <NameSpaces>
+      <NameSpace>
+        <URL>http://www.colpatria.com/esb/services/account/as/accountMovementsGet/</URL>
+        <Prefix>tns</Prefix>
+      </NameSpace>
+	  <NameSpace>
+        <URL>http://www.colpatria.com/esb/services/metadata</URL>
+        <Prefix>meta</Prefix>
+      </NameSpace>
+    </NameSpaces>
+    <SourceRule>
+      <FetchAs>
+       <Integral workarea="Create" fetchunit="S"/>
+      </FetchAs>
+      <GET>
+       <FILE_Source>
+        <FilePath>TramaEntrada.xml</FilePath>
+        <FILE_Source.Transaction OnSuccess="Keep" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Source>
+      </GET>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+      <MetaDataLocation>account.movementsget.xsd</MetaDataLocation>
+    </SourceRule>
+  </Input>
+  <Output>
+    <Schema cardnumber="1"
+            cardname="Out_Request"
+            typetree="OCBMOVA01_REQUEST.mtt"
+            type="REQUEST Record CopyBook"/>
+    <NameSpaces/>
+    <TargetRule>
+      <PUT>
+       <FILE_Target>
+        <FilePath>OCBMOVA01_REQUEST.txt</FilePath>
+        <FILE_Target.Transaction OnSuccess="Create" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Target>
+      </PUT>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </TargetRule>
+    <SyntaxCard>OFF</SyntaxCard>
+    <MapRule rulenumber="1">
+      <objectset>TRANSACTION_ID Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=transactionId Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="2">
+      <objectset>TYPE_RQ Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=&quot;RQ&quot;</objectrule>
+    </MapRule>
+    <MapRule rulenumber="3">
+      <objectset>COUNTRY_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(operationCountry Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="4">
+      <objectset>BANK_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(institutionCode Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="5">
+      <objectset>REQUESTER_SYSTEM Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=requestSystem Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="6">
+      <objectset>SERVICE_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=serviceCode Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="7">
+      <objectset>REQUESTING_DEVICE_ID Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=host Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="8">
+      <objectset>REQUESTER_USER Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=requestUser Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="9">
+      <objectset>REQUEST_DATE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(FROMDATETIME(transactionDate Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request, &quot;{CCYYMMDD}&quot;))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="10">
+      <objectset>REQUEST_TIME Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(FROMDATETIME(transactionTime Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request, &quot;{HH24MMSS}&quot;))</objectrule>
+    </MapRule>
+    <MapRule rulenumber="11">
+      <objectset>INTEGRATION_USER Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=userName Comp UsernameToken:usernameToken Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="12">
+      <objectset>INTEGRATION_USER_PASSWORD Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=password Comp UsernameToken:usernameToken Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="13">
+      <objectset>IDENTIFICATION_TYPE Field:BODY Group:Out_Request</objectset>
+      <objectrule>=idType Comp customer:customer Comp _movementsGetRq:movementsGetRq Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="14">
+      <objectset>IDENTIFICATION_NUMBER Field:BODY Group:Out_Request</objectset>
+      <objectrule>=idNumber Comp customer:customer Comp _movementsGetRq:movementsGetRq Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request</objectrule>
+    </MapRule>
+    <MapRule rulenumber="15">
+      <objectset>RESPONSE_DATE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="16">
+      <objectset>RESPONSE_TIME Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="17">
+      <objectset>RESPONSE_CODE Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="18">
+      <objectset>RESPONSE_DESCRIPTION Field:HEADER Group:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="19">
+      <objectset>#1 Filler:Out_Request</objectset>
+      <objectrule>=NONE</objectrule>
+    </MapRule>
+    <MapRule rulenumber="20">
+      <objectset>PAGE_NUM Field:BODY Group:Out_Request</objectset>
+      <objectrule>=TEXTTONUMBER(numberPages Comp esbHeaderRq:esbHeader Comp requestHeader:requestHeader Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+    <MapRule rulenumber="21">
+      <objectset>PRODUCTS:BODY Group:Out_Request</objectset>
+      <objectrule>=products(product Comp products:products Comp _movementsGetRq:movementsGetRq Comp _accountMovementsGetRq Type:accountMovementsGetRq Element:Global:In_Request)</objectrule>
+    </MapRule>
+  </Output>
+ </Map>
+ <Map name="products" InputCount="1" OutputCount="1" AuditCount="0" RemarkCount="0" Source="" Runtime="WTX">
+  <MapSettings>
+   <MapAudit Switch="OFF">
+    <BurstAudit>
+     <Data.Never SizeValidation="WrongSize"/>
+     <Execution.Never/>
+    </BurstAudit>
+    <SummaryAudit execution="Always"/>
+    <SettingsAudit data="Never" map="Never"/>
+    <AuditLocation.File>
+     <Directory.Map/>
+     <FileName.Unique/>
+    </AuditLocation.File>
+   </MapAudit>
+   <MapTrace Switch="OFF">
+    <ContentTrace.File Switch="OFF">
+     <TraceLocation.File>
+      <Directory.Map/>
+      <FileName.Default/>
+     </TraceLocation.File>
+     <InputContentTrace.OFF/>
+     <RulesTrace.OFF/>
+     <SummaryContentTrace.OFF/>
+    </ContentTrace.File>
+   </MapTrace>
+   <WorkSpace.File PageSize="64" PageCount="8">
+    <Directory.Map/>
+    <WorkFilePrefix.Unique/>
+   </WorkSpace.File>
+   <Century.Current/>
+   <Validation.Standard/>
+   <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+   <Warnings.Every action="warn"/>
+   <CodePageFallback Fallback="SKIP"/>
+  </MapSettings>
+  <Input>
+    <Schema cardnumber="1"
+            cardname="input"
+            typetree="account.movementsget.mtt"
+            type="product Comp products Type XSD"/>
+    <NameSpaces/>
+    <SourceRule>
+      <FetchAs>
+       <Integral workarea="Create" fetchunit="S"/>
+      </FetchAs>
+      <GET>
+       <FILE_Source>
+        <FILE_Source.Transaction OnSuccess="Keep" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Source>
+      </GET>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </SourceRule>
+  </Input>
+  <Output>
+    <Schema cardnumber="1"
+            cardname="output"
+            typetree="OCBMOVA01_REQUEST.mtt"
+            type="PRODUCTS Group CopyBook"/>
+    <NameSpaces/>
+    <TargetRule>
+      <PUT>
+       <FILE_Target>
+        <FILE_Target.Transaction OnSuccess="Create" OnFailure="Rollback" Scope="Map"/>
+        <Retry Switch="OFF" MaxAttempts="0" Interval="0"/>
+        <DocumentVerification>Never</DocumentVerification>
+       </FILE_Target>
+      </PUT>
+      <Backup Switch="OFF" When="Always">
+       <BackupLocation.File>
+        <Directory.Map/>
+        <FileName.Unique/>
+       </BackupLocation.File>
+      </Backup>
+    </TargetRule>
+    <SyntaxCard>OFF</SyntaxCard>
+    <MapRule rulenumber="1">
+      <objectset>PRODUCT_CODE Field:output</objectset>
+      <objectrule>=code Comp product:input</objectrule>
+    </MapRule>
+    <MapRule rulenumber="2">
+      <objectset>PRODUCT_NUMBER Field:output</objectset>
+      <objectrule>=number Comp product:input</objectrule>
+    </MapRule>
+  </Output>
+ </Map>
+</MMS>

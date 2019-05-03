@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="0" currentCardNumber="0" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="4101066836">
+    <mopt:mapinfos name="XML_OCBMOVA01" number="1" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="XML_OCBMOVA01"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Request" isOutput="false" mapName="XML_OCBMOVA01">
+      <mopt:path>116:117</mopt:path>
+      <mopt:path>114:116:117</mopt:path>
+      <mopt:path>76:114:116:117</mopt:path>
+      <mopt:path>85:76:114:116:117</mopt:path>
+      <mopt:path>112:114:116:117</mopt:path>
+      <mopt:path>21:112:114:116:117</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Request" isOutput="true" mapName="XML_OCBMOVA01">
+      <mopt:path>HEADER Group:Out_Request</mopt:path>
+      <mopt:path>BODY Group:Out_Request</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="XML_OCBMOVA01">
+      <mopt:cardstates index="0" name="In_Request" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Request" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

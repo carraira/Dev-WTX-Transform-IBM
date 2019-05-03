@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="accountMovementsGet"
+	targetNamespace="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soapenv11="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:tns="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/"
+			xmlns:mrm="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/">
+			<xsd:include schemaLocation="account.movementsget.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="accountMovementsGet_in">
+		<wsdl:part element="tns:accountMovementsGetRq"
+			name="accountMovementsGetRq" />
+	</wsdl:message>
+	<wsdl:message name="accountMovementsGet_out">
+		<wsdl:part element="tns:accountMovementsGetRs"
+			name="accountMovementsGetRs" />
+	</wsdl:message>
+	<wsdl:message name="accountMovementsGet_fault1">
+		<wsdl:part element="tns:accountMovementsGetRs"
+			name="accountMovementsGetRs" />
+	</wsdl:message>
+	<wsdl:portType name="MBC_accountMovementsGetPortType">
+		<wsdl:operation name="accountMovementsGet">
+			<wsdl:input message="tns:accountMovementsGet_in"
+				name="accountMovementsGet_Input" />
+			<wsdl:output message="tns:accountMovementsGet_out"
+				name="accountMovementsGet_Output" />
+			<wsdl:fault message="tns:accountMovementsGet_fault1"
+				name="accountMovementsGet_Fault" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MBC_accountMovementsGetSOAP_HTTP_Binding"
+		type="tns:MBC_accountMovementsGetPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="accountMovementsGet">
+			<soap:operation soapAction="" />
+			<wsdl:input name="accountMovementsGet_Input">
+				<soap:body parts="accountMovementsGetRq" use="literal" />
+			</wsdl:input>
+			<wsdl:output name="accountMovementsGet_Output">
+				<soap:body parts="accountMovementsGetRs" use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="accountMovementsGet_Fault">
+				<soap:fault name="accountMovementsGet_Fault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="accountMovementsGet">
+		<wsdl:port binding="tns:MBC_accountMovementsGetSOAP_HTTP_Binding"
+			name="accountMovementsGetSOAP_HTTP_Port">
+			<soap:address
+				location="https://bancoColpatria/accountmovementsget" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

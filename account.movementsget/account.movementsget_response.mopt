@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mopt:mopt xmlns:mopt="http://www.ibm.com/websphere/dtx/ui/me/mopt">
+  <mopt:info activeInputCardNumber="0" activeOutputCardNumber="1" currentCardNumber="1" currentMapNumber="1" version="12.0"/>
+  <mopt:composition checksum="210190373">
+    <mopt:mapinfos name="OCBMOVA01_XML" number="1" subMapCount="1">
+      <mopt:funcMapInfos cardName="Out_Response" count="1" name="movements"/>
+    </mopt:mapinfos>
+    <mopt:mapinfos name="movements" number="3" subMapCount="0"/>
+  </mopt:composition>
+  <mopt:debug/>
+  <mopt:runresults>
+    <mopt:results mapName="OCBMOVA01_XML"/>
+    <mopt:results mapName="movements"/>
+  </mopt:runresults>
+  <mopt:editor>
+    <mopt:expansions cardName="In_Response" isOutput="false" mapName="OCBMOVA01_XML">
+      <mopt:path>6:5</mopt:path>
+      <mopt:path>24:5</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="Out_Response" isOutput="true" mapName="OCBMOVA01_XML">
+      <mopt:path>Out_Response</mopt:path>
+      <mopt:path>Global:Out_Response</mopt:path>
+      <mopt:path>accountMovementsGetRs Element:Global:Out_Response</mopt:path>
+      <mopt:path>meta~responseHeader:accountMovementsGetRs Element:Global:Out_Response</mopt:path>
+    </mopt:expansions>
+    <mopt:expansions cardName="output" isOutput="true" mapName="movements">
+      <mopt:path>output</mopt:path>
+    </mopt:expansions>
+    <mopt:mapstates name="OCBMOVA01_XML">
+      <mopt:cardstates index="0" name="In_Response" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="Out_Response" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+    <mopt:mapstates name="movements">
+      <mopt:cardstates index="0" name="input" number="1" output="false" side="0"/>
+      <mopt:cardstates index="0" name="output" number="1" output="true" side="2"/>
+    </mopt:mapstates>
+  </mopt:editor>
+</mopt:mopt>

@@ -1,0 +1,439 @@
+<acc:accountMovementsGetRs
+	xmlns:tns="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/"
+	xmlns:meta="http://www.colpatria.com/esb/services/metadata">
+	<met:responseHeader>
+		<met:status>
+			<met:statusCode>Success</met:statusCode>
+		</met:status>
+		<met:esbHeader>
+			<met:transactionId>2019041215021231</met:transactionId>
+			<met:transactionDate>2019-04-12</met:transactionDate>
+			<met:transactionTime>15:02:31</met:transactionTime>
+		</met:esbHeader>
+	</met:responseHeader>
+	<acc:movementsGetRs>
+		<acc:cursor>6513568745930</acc:cursor>
+		<acc:product>
+			<acc:code>1</acc:code>
+			<acc:number>122002506</acc:number>
+		</acc:product>
+		<acc:movements>
+			<acc:movement>
+				<acc:movementID>651356874591</acc:movementID>
+				<acc:branchCode>305</acc:branchCode>
+				<acc:description>Movimiento 1</acc:description>
+				<acc:originalDate>2019-03-17</acc:originalDate>
+				<acc:amount>3425636319586.72</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874592</acc:movementID>
+				<acc:branchCode>922</acc:branchCode>
+				<acc:description>Movimiento 2</acc:description>
+				<acc:originalDate>2017-03-28</acc:originalDate>
+				<acc:amount>6533402935570.03</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874593</acc:movementID>
+				<acc:branchCode>862</acc:branchCode>
+				<acc:description>Movimiento 3</acc:description>
+				<acc:originalDate>2017-03-18</acc:originalDate>
+				<acc:amount>6555157920080.74</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874594</acc:movementID>
+				<acc:branchCode>984</acc:branchCode>
+				<acc:description>Movimiento 4</acc:description>
+				<acc:originalDate>2018-03-22</acc:originalDate>
+				<acc:amount>3151854166393.47</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874595</acc:movementID>
+				<acc:branchCode>639</acc:branchCode>
+				<acc:description>Movimiento 5</acc:description>
+				<acc:originalDate>2016-03-25</acc:originalDate>
+				<acc:amount>8993354369519.79</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874596</acc:movementID>
+				<acc:branchCode>200</acc:branchCode>
+				<acc:description>Movimiento 6</acc:description>
+				<acc:originalDate>2019-03-11</acc:originalDate>
+				<acc:amount>5623812514198.35</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874597</acc:movementID>
+				<acc:branchCode>747</acc:branchCode>
+				<acc:description>Movimiento 7</acc:description>
+				<acc:originalDate>2017-03-17</acc:originalDate>
+				<acc:amount>798028050296.22</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874598</acc:movementID>
+				<acc:branchCode>124</acc:branchCode>
+				<acc:description>Movimiento 8</acc:description>
+				<acc:originalDate>2018-03-21</acc:originalDate>
+				<acc:amount>4894487677875.29</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>651356874599</acc:movementID>
+				<acc:branchCode>547</acc:branchCode>
+				<acc:description>Movimiento 9</acc:description>
+				<acc:originalDate>2018-03-28</acc:originalDate>
+				<acc:amount>11812689702.23</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745910</acc:movementID>
+				<acc:branchCode>65</acc:branchCode>
+				<acc:description>Movimiento 10</acc:description>
+				<acc:originalDate>2017-03-25</acc:originalDate>
+				<acc:amount>6130312520641.91</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745911</acc:movementID>
+				<acc:branchCode>147</acc:branchCode>
+				<acc:description>Movimiento 11</acc:description>
+				<acc:originalDate>2015-03-12</acc:originalDate>
+				<acc:amount>9676432630944.35</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745912</acc:movementID>
+				<acc:branchCode>170</acc:branchCode>
+				<acc:description>Movimiento 12</acc:description>
+				<acc:originalDate>2018-03-16</acc:originalDate>
+				<acc:amount>6648450388640.83</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745913</acc:movementID>
+				<acc:branchCode>335</acc:branchCode>
+				<acc:description>Movimiento 13</acc:description>
+				<acc:originalDate>2018-03-26</acc:originalDate>
+				<acc:amount>3920381107763.34</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745914</acc:movementID>
+				<acc:branchCode>839</acc:branchCode>
+				<acc:description>Movimiento 14</acc:description>
+				<acc:originalDate>2019-03-14</acc:originalDate>
+				<acc:amount>1625583929462.72</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745915</acc:movementID>
+				<acc:branchCode>782</acc:branchCode>
+				<acc:description>Movimiento 15</acc:description>
+				<acc:originalDate>2019-03-24</acc:originalDate>
+				<acc:amount>5355979711463.72</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745916</acc:movementID>
+				<acc:branchCode>191</acc:branchCode>
+				<acc:description>Movimiento 16</acc:description>
+				<acc:originalDate>2016-03-31</acc:originalDate>
+				<acc:amount>7634372453463.32</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745917</acc:movementID>
+				<acc:branchCode>612</acc:branchCode>
+				<acc:description>Movimiento 17</acc:description>
+				<acc:originalDate>2015-03-15</acc:originalDate>
+				<acc:amount>2821766929233.58</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745918</acc:movementID>
+				<acc:branchCode>180</acc:branchCode>
+				<acc:description>Movimiento 18</acc:description>
+				<acc:originalDate>2018-03-15</acc:originalDate>
+				<acc:amount>6171324854952.86</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745919</acc:movementID>
+				<acc:branchCode>587</acc:branchCode>
+				<acc:description>Movimiento 19</acc:description>
+				<acc:originalDate>2018-03-18</acc:originalDate>
+				<acc:amount>4142278667594.53</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745920</acc:movementID>
+				<acc:branchCode>326</acc:branchCode>
+				<acc:description>Movimiento 20</acc:description>
+				<acc:originalDate>2019-03-23</acc:originalDate>
+				<acc:amount>6494982406287.65</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745921</acc:movementID>
+				<acc:branchCode>805</acc:branchCode>
+				<acc:description>Movimiento 21</acc:description>
+				<acc:originalDate>2019-03-25</acc:originalDate>
+				<acc:amount>8591085151719.23</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745922</acc:movementID>
+				<acc:branchCode>889</acc:branchCode>
+				<acc:description>Movimiento 22</acc:description>
+				<acc:originalDate>2018-03-17</acc:originalDate>
+				<acc:amount>703641200796.19</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745923</acc:movementID>
+				<acc:branchCode>676</acc:branchCode>
+				<acc:description>Movimiento 23</acc:description>
+				<acc:originalDate>2019-03-23</acc:originalDate>
+				<acc:amount>244807047674.82</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745924</acc:movementID>
+				<acc:branchCode>491</acc:branchCode>
+				<acc:description>Movimiento 24</acc:description>
+				<acc:originalDate>2015-03-23</acc:originalDate>
+				<acc:amount>7568720562916.82</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745925</acc:movementID>
+				<acc:branchCode>359</acc:branchCode>
+				<acc:description>Movimiento 25</acc:description>
+				<acc:originalDate>2019-03-31</acc:originalDate>
+				<acc:amount>5383655352628.26</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745926</acc:movementID>
+				<acc:branchCode>883</acc:branchCode>
+				<acc:description>Movimiento 26</acc:description>
+				<acc:originalDate>2019-03-10</acc:originalDate>
+				<acc:amount>4677171812374.57</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745927</acc:movementID>
+				<acc:branchCode>868</acc:branchCode>
+				<acc:description>Movimiento 27</acc:description>
+				<acc:originalDate>2017-03-25</acc:originalDate>
+				<acc:amount>3193360250039.09</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745928</acc:movementID>
+				<acc:branchCode>531</acc:branchCode>
+				<acc:description>Movimiento 28</acc:description>
+				<acc:originalDate>2015-03-25</acc:originalDate>
+				<acc:amount>5853113761841.56</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745929</acc:movementID>
+				<acc:branchCode>940</acc:branchCode>
+				<acc:description>Movimiento 29</acc:description>
+				<acc:originalDate>2018-03-21</acc:originalDate>
+				<acc:amount>1726280307613.12</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745930</acc:movementID>
+				<acc:branchCode>870</acc:branchCode>
+				<acc:description>Movimiento 30</acc:description>
+				<acc:originalDate>2015-03-29</acc:originalDate>
+				<acc:amount>2179024613471.09</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745931</acc:movementID>
+				<acc:branchCode>644</acc:branchCode>
+				<acc:description>Movimiento 31</acc:description>
+				<acc:originalDate>2017-03-16</acc:originalDate>
+				<acc:amount>2678330185863.19</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745932</acc:movementID>
+				<acc:branchCode>869</acc:branchCode>
+				<acc:description>Movimiento 32</acc:description>
+				<acc:originalDate>2015-03-26</acc:originalDate>
+				<acc:amount>41547630050.36</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745933</acc:movementID>
+				<acc:branchCode>595</acc:branchCode>
+				<acc:description>Movimiento 33</acc:description>
+				<acc:originalDate>2017-03-26</acc:originalDate>
+				<acc:amount>7110106377030.2</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745934</acc:movementID>
+				<acc:branchCode>777</acc:branchCode>
+				<acc:description>Movimiento 34</acc:description>
+				<acc:originalDate>2016-03-25</acc:originalDate>
+				<acc:amount>3383857956716.02</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745935</acc:movementID>
+				<acc:branchCode>412</acc:branchCode>
+				<acc:description>Movimiento 35</acc:description>
+				<acc:originalDate>2019-03-18</acc:originalDate>
+				<acc:amount>781007663874.34</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745936</acc:movementID>
+				<acc:branchCode>986</acc:branchCode>
+				<acc:description>Movimiento 36</acc:description>
+				<acc:originalDate>2015-03-13</acc:originalDate>
+				<acc:amount>6458901767602.67</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745937</acc:movementID>
+				<acc:branchCode>584</acc:branchCode>
+				<acc:description>Movimiento 37</acc:description>
+				<acc:originalDate>2015-03-15</acc:originalDate>
+				<acc:amount>8418143712439.99</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745938</acc:movementID>
+				<acc:branchCode>950</acc:branchCode>
+				<acc:description>Movimiento 38</acc:description>
+				<acc:originalDate>2017-03-15</acc:originalDate>
+				<acc:amount>6598290161592.43</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745939</acc:movementID>
+				<acc:branchCode>393</acc:branchCode>
+				<acc:description>Movimiento 39</acc:description>
+				<acc:originalDate>2018-03-15</acc:originalDate>
+				<acc:amount>8029216616616.53</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745940</acc:movementID>
+				<acc:branchCode>342</acc:branchCode>
+				<acc:description>Movimiento 40</acc:description>
+				<acc:originalDate>2017-03-29</acc:originalDate>
+				<acc:amount>8316873577175.43</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745941</acc:movementID>
+				<acc:branchCode>310</acc:branchCode>
+				<acc:description>Movimiento 41</acc:description>
+				<acc:originalDate>2016-03-19</acc:originalDate>
+				<acc:amount>5245585523576.5</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745942</acc:movementID>
+				<acc:branchCode>438</acc:branchCode>
+				<acc:description>Movimiento 42</acc:description>
+				<acc:originalDate>2018-03-18</acc:originalDate>
+				<acc:amount>998439814472.55</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745943</acc:movementID>
+				<acc:branchCode>21</acc:branchCode>
+				<acc:description>Movimiento 43</acc:description>
+				<acc:originalDate>2015-03-15</acc:originalDate>
+				<acc:amount>5741432209169.57</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745944</acc:movementID>
+				<acc:branchCode>831</acc:branchCode>
+				<acc:description>Movimiento 44</acc:description>
+				<acc:originalDate>2015-03-30</acc:originalDate>
+				<acc:amount>2168790327056.14</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745945</acc:movementID>
+				<acc:branchCode>483</acc:branchCode>
+				<acc:description>Movimiento 45</acc:description>
+				<acc:originalDate>2016-03-29</acc:originalDate>
+				<acc:amount>9689243479913.23</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745946</acc:movementID>
+				<acc:branchCode>53</acc:branchCode>
+				<acc:description>Movimiento 46</acc:description>
+				<acc:originalDate>2019-03-10</acc:originalDate>
+				<acc:amount>527881454291.02</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745947</acc:movementID>
+				<acc:branchCode>489</acc:branchCode>
+				<acc:description>Movimiento 47</acc:description>
+				<acc:originalDate>2015-03-24</acc:originalDate>
+				<acc:amount>7029354619010.47</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745948</acc:movementID>
+				<acc:branchCode>167</acc:branchCode>
+				<acc:description>Movimiento 48</acc:description>
+				<acc:originalDate>2017-03-27</acc:originalDate>
+				<acc:amount>975732414519.67</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745949</acc:movementID>
+				<acc:branchCode>293</acc:branchCode>
+				<acc:description>Movimiento 49</acc:description>
+				<acc:originalDate>2016-03-27</acc:originalDate>
+				<acc:amount>5390585911428.71</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745950</acc:movementID>
+				<acc:branchCode>439</acc:branchCode>
+				<acc:description>Movimiento 50</acc:description>
+				<acc:originalDate>2017-03-21</acc:originalDate>
+				<acc:amount>8119827976053.74</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745951</acc:movementID>
+				<acc:branchCode>437</acc:branchCode>
+				<acc:description>Movimiento 51</acc:description>
+				<acc:originalDate>2016-03-30</acc:originalDate>
+				<acc:amount>9822134007618.23</acc:amount>
+				<acc:transactionType>D</acc:transactionType>
+			</acc:movement>
+			<acc:movement>
+				<acc:movementID>6513568745952</acc:movementID>
+				<acc:branchCode>954</acc:branchCode>
+				<acc:description>Movimiento 52</acc:description>
+				<acc:originalDate>2018-03-16</acc:originalDate>
+				<acc:amount>1681744319391.3</acc:amount>
+				<acc:transactionType>C</acc:transactionType>
+			</acc:movement>
+		</acc:movements>
+	</acc:movementsGetRs>
+</acc:accountMovementsGetRs>
