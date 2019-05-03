@@ -1,0 +1,24 @@
+<acc:accountMovementsGetRq xmlns:acc="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/" xmlns:met="http://www.colpatria.com/esb/services/metadata">
+	<met:requestHeader>
+		<met:esbHeader>
+			<met:transactionId>20190408163859636</met:transactionId>
+			<met:serviceCode>OCBMOVA01</met:serviceCode>
+			<met:requestUser>OCB</met:requestUser>
+			<met:requestSystem>DIG</met:requestSystem>
+			<met:host>169.254.204.186</met:host>
+			<met:executionMode>S</met:executionMode>
+			<met:operationCountry>57</met:operationCountry>
+			<met:operationBank>Colpatria</met:operationBank>
+			<met:transactionDate>2019-04-08</met:transactionDate>
+			<met:transactionTime>16:38:59</met:transactionTime>
+			<met:numberPages>01</met:numberPages>
+			<met:institutionCode>019</met:institutionCode>
+		</met:esbHeader>
+	</met:requestHeader>
+	<acc:movementsGetRq>
+		<acc:product>
+			<acc:code>003</acc:code>
+			<acc:number>65465413431152</acc:number>
+		</acc:product>
+	</acc:movementsGetRq>
+</acc:accountMovementsGetRq>

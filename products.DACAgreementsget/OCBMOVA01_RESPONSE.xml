@@ -1,0 +1,234 @@
+<tns:accountMovementsGetRs
+	xmlns:tns="http://www.colpatria.com/esb/services/account/as/accountMovementsGet/"
+	xmlns:meta="http://www.colpatria.com/esb/services/metadata">
+	<meta:responseHeader>
+		<meta:status>
+			<meta:statusCode>Success</meta:statusCode>
+		</meta:status>
+		<meta:esbHeader>
+			<meta:transactionId>2019041015291050</meta:transactionId>
+			<meta:transactionDate>2019-04-10</meta:transactionDate>
+			<meta:transactionTime>15:29:50</meta:transactionTime>
+			<meta:numberPages>1</meta:numberPages>
+			<meta:totPages>3</meta:totPages>
+		</meta:esbHeader>
+	</meta:responseHeader>
+	<tns:movementsGetRs>
+		<tns:product>
+			<tns:code>1</tns:code>
+			<tns:number>122002506</tns:number>
+		</tns:product>
+		<tns:movements>
+			<tns:movement>
+				<tns:movementID>651356874591</tns:movementID>
+				<tns:description>Movimiento 1</tns:description>
+				<tns:originalDate>2015-03-27</tns:originalDate>
+				<tns:amount>5191100654343.92</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874592</tns:movementID>
+				<tns:description>Movimiento 2</tns:description>
+				<tns:originalDate>2019-03-24</tns:originalDate>
+				<tns:amount>4295505760588.06</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874593</tns:movementID>
+				<tns:description>Movimiento 3</tns:description>
+				<tns:originalDate>2017-03-14</tns:originalDate>
+				<tns:amount>2482574165043.92</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874594</tns:movementID>
+				<tns:description>Movimiento 4</tns:description>
+				<tns:originalDate>2017-03-25</tns:originalDate>
+				<tns:amount>4208374982971.54</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874595</tns:movementID>
+				<tns:description>Movimiento 5</tns:description>
+				<tns:originalDate>2018-03-15</tns:originalDate>
+				<tns:amount>285261063666.53</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874596</tns:movementID>
+				<tns:description>Movimiento 6</tns:description>
+				<tns:originalDate>2019-03-17</tns:originalDate>
+				<tns:amount>6449989912015.51</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874597</tns:movementID>
+				<tns:description>Movimiento 7</tns:description>
+				<tns:originalDate>2017-03-12</tns:originalDate>
+				<tns:amount>9272782946137.33</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874598</tns:movementID>
+				<tns:description>Movimiento 8</tns:description>
+				<tns:originalDate>2017-03-18</tns:originalDate>
+				<tns:amount>3401214482840.12</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>651356874599</tns:movementID>
+				<tns:description>Movimiento 9</tns:description>
+				<tns:originalDate>2018-03-15</tns:originalDate>
+				<tns:amount>8097291274376.22</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745910</tns:movementID>
+				<tns:description>Movimiento 10</tns:description>
+				<tns:originalDate>2017-03-15</tns:originalDate>
+				<tns:amount>2841353768871.51</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745911</tns:movementID>
+				<tns:description>Movimiento 11</tns:description>
+				<tns:originalDate>2018-03-22</tns:originalDate>
+				<tns:amount>7842941701626.66</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745912</tns:movementID>
+				<tns:description>Movimiento 12</tns:description>
+				<tns:originalDate>2015-03-30</tns:originalDate>
+				<tns:amount>8005193769435.54</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745913</tns:movementID>
+				<tns:description>Movimiento 13</tns:description>
+				<tns:originalDate>2017-03-26</tns:originalDate>
+				<tns:amount>4024657867582.4</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745914</tns:movementID>
+				<tns:description>Movimiento 14</tns:description>
+				<tns:originalDate>2015-03-31</tns:originalDate>
+				<tns:amount>7562588400003.86</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745915</tns:movementID>
+				<tns:description>Movimiento 15</tns:description>
+				<tns:originalDate>2018-03-10</tns:originalDate>
+				<tns:amount>627110936074.72</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745916</tns:movementID>
+				<tns:description>Movimiento 16</tns:description>
+				<tns:originalDate>2017-03-18</tns:originalDate>
+				<tns:amount>3326974666583.84</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745917</tns:movementID>
+				<tns:description>Movimiento 17</tns:description>
+				<tns:originalDate>2015-03-31</tns:originalDate>
+				<tns:amount>3506183954441.65</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745918</tns:movementID>
+				<tns:description>Movimiento 18</tns:description>
+				<tns:originalDate>2018-03-16</tns:originalDate>
+				<tns:amount>1085070507763.09</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745919</tns:movementID>
+				<tns:description>Movimiento 19</tns:description>
+				<tns:originalDate>2015-03-13</tns:originalDate>
+				<tns:amount>2098019815232.2</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745920</tns:movementID>
+				<tns:description>Movimiento 20</tns:description>
+				<tns:originalDate>2016-03-29</tns:originalDate>
+				<tns:amount>9057660512890.7</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745921</tns:movementID>
+				<tns:description>Movimiento 21</tns:description>
+				<tns:originalDate>2018-03-28</tns:originalDate>
+				<tns:amount>5318088205970.02</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745922</tns:movementID>
+				<tns:description>Movimiento 22</tns:description>
+				<tns:originalDate>2017-03-30</tns:originalDate>
+				<tns:amount>4729680512897.16</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745923</tns:movementID>
+				<tns:description>Movimiento 23</tns:description>
+				<tns:originalDate>2016-03-21</tns:originalDate>
+				<tns:amount>5312876868545.06</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745924</tns:movementID>
+				<tns:description>Movimiento 24</tns:description>
+				<tns:originalDate>2016-03-10</tns:originalDate>
+				<tns:amount>4961782596366.51</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745925</tns:movementID>
+				<tns:description>Movimiento 25</tns:description>
+				<tns:originalDate>2016-03-19</tns:originalDate>
+				<tns:amount>519529646570.79</tns:amount>
+				<tns:transactionType>D</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745926</tns:movementID>
+				<tns:description>Movimiento 26</tns:description>
+				<tns:originalDate>2016-03-16</tns:originalDate>
+				<tns:amount>9226375089763.74</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745927</tns:movementID>
+				<tns:description>Movimiento 27</tns:description>
+				<tns:originalDate>2015-03-10</tns:originalDate>
+				<tns:amount>9945127892550.86</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745928</tns:movementID>
+				<tns:description>Movimiento 28</tns:description>
+				<tns:originalDate>2016-03-15</tns:originalDate>
+				<tns:amount>7492574551788.16</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745929</tns:movementID>
+				<tns:description>Movimiento 29</tns:description>
+				<tns:originalDate>2016-03-13</tns:originalDate>
+				<tns:amount>4514624440186.72</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+			<tns:movement>
+				<tns:movementID>6513568745930</tns:movementID>
+				<tns:description>Movimiento 30</tns:description>
+				<tns:originalDate>2018-03-30</tns:originalDate>
+				<tns:amount>1844427396839.04</tns:amount>
+				<tns:transactionType>C</tns:transactionType>
+			</tns:movement>
+		</tns:movements>
+	</tns:movementsGetRs>
+</tns:accountMovementsGetRs>
